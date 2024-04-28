@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import SceneLvL1 from "./scenes/MainMap";
 
 export default new Phaser.Game({
     type: Phaser.WEBGL,
@@ -11,10 +12,11 @@ export default new Phaser.Game({
     physics: {
         default: 'arcade',
         arcade: {
+            gravity: -200,
             //debug: true,
         }
     },
     scene: [
-
+        new SceneLvL1(this)
     ]
 });
